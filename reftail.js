@@ -13,13 +13,15 @@ $(document).ready(function() {
 	if (ref !== undefined) {
     	$.ajax({
 		  url: "http://reftail.kejsarmakten.se/add",
-		  data: {"ref": ref, "host": host }
+		  data: {"ref": ref, "host": host},
+		  dataType: "jsonp"
 		});
 	}
     $('.tictail_add_to_cart_button').bind('click', function() {
     	$.ajax({
 		  url: "http://reftail.kejsarmakten.se/sell",
-		  data: {"ref": ref, "host": host, "title":document.title}
+		  data: {"ref": ref, "host": host, "title":document.title},
+		  dataType: "jsonp"
 		});
     });
 });
